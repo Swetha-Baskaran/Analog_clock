@@ -1,0 +1,77 @@
+body {
+            padding: 0;
+            margin: 0;
+            background-color: #02121c;
+        }
+        
+        .clock {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+            width: 300px;
+            height: 300px;
+            background: url(clock-bg.png);
+            background-size: cover;
+            border-radius: 50%;
+            top: 150px;
+            left: 50%;
+            transform: translate(-50%, -0%);
+            box-shadow: 0 0 6px 2px #1c2628, inset 0 0 11px 2px #ffffff33, 0 0 6px 1px #a2a2a269, inset 0 0 16px 11px #0000003d;
+        }
+        
+        .clock::before {
+            content: '';
+            background-color: white;
+            position: absolute;
+            width: 10px;
+            height: 10px;
+            transform: rotate(45deg);
+            z-index: 10;
+            border-radius: 50%;
+        }
+        
+        .clock .hour,
+        .min,
+        .sec {
+            position: relative;
+        }
+        
+        .hr {
+            position: absolute;
+            background-color: #e91e63;
+            height: 78px;
+            width: 7px;
+            top: -79px;
+            left: -3.6px;
+            z-index: -3;
+        }
+        
+        .mn {
+            position: absolute;
+            background-color: white;
+            height: 86px;
+            border-radius: 20px;
+            width: 5px;
+            top: -88px;
+            left: -3px;
+            z-index: -2;
+        }
+        
+        .sc {
+            position: absolute;
+            background-color: #5687ff;
+            height: 125px;
+            width: 2px;
+            top: -100px;
+            left: -1.2px;
+            z-index: -1;
+        }
+        
+        .active {
+            box-shadow: 0px 0px 9px 2px #4b4b4b, inset 0 0 9px 3px #00000054, 0 0 9px 0px #0000001c, inset 0 0 20px 0px #ffffff;
+        }
+        
+        .active::before {
+            background-color: #03a9f4;
+        }
